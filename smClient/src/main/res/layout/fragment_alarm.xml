@@ -1,0 +1,129 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    tools:context="org.aku.sm.alarm.AlarmFragment">
+
+
+    <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:weightSum="5"
+            android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/alarm_1_text"
+            android:id="@+id/alarm1Text"
+            android:layout_weight="1"/>
+
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="time"
+                android:ems="10"
+                android:id="@+id/editAlarm1Id"
+                android:labelFor="@id/editAlarm1Id"
+                android:layout_weight="4"/>
+    </TableRow>
+
+    <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:weightSum="5"
+            android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/alarm_2_text"
+            android:id="@+id/alarm2Text"
+            android:layout_weight="1" />
+
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="time"
+                android:ems="10"
+                android:id="@+id/editAlarm2Id"
+                android:labelFor="@id/editAlarm2Id"
+                android:layout_weight="4"/>
+    </TableRow>
+
+
+    <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:weightSum="5"
+            android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/alarm_3_text"
+            android:id="@+id/alarm3Text"
+            android:layout_weight="1"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="time"
+            android:ems="10"
+            android:id="@+id/editAlarm3Id"
+            android:labelFor="@id/editAlarm3Id"
+            android:layout_weight="4"/>
+    </TableRow>
+
+    <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:weightSum="5"
+            android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/alarm_4_text"
+            android:id="@+id/alarm4Text"
+            android:layout_weight="1"/>
+
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="time"
+                android:ems="10"
+                android:id="@+id/editAlarm4Id"
+                android:labelFor="@id/editAlarm4Id"
+                android:layout_weight="4" />
+
+    </TableRow>
+
+    <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:weightSum="5"
+            android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/alarm_info_text"
+            android:id="@+id/alarmInfo"
+            android:layout_weight="5" />
+    </TableRow>
+
+</LinearLayout>

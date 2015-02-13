@@ -1,0 +1,38 @@
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkin_photo"
+        android:src="@drawable/head"
+        android:contentDescription="@string/checkin_image_content_description"
+        android:minHeight="200dp"
+        android:minWidth="160dp"
+        android:maxHeight="200dp"
+        android:maxWidth="160dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/view_checkin_header_patient_name"
+        android:id="@+id/name"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/checkin_photo"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/view_checkin_header_checkin_date"
+        android:id="@+id/clCheckinDate"
+        android:layout_below="@+id/name"
+        android:layout_toEndOf="@+id/checkin_photo"
+        android:layout_marginTop="20dp" />
+
+</RelativeLayout>

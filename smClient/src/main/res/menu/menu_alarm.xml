@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity" >
+    <item android:id="@+id/action_create"
+        android:title="@string/action_create"
+        android:icon="@drawable/ic_action_add_alarm"
+        android:showAsAction="withText|ifRoom" />
+    <item android:id="@+id/action_delete"
+        android:title="@string/action_delete"
+        android:icon="@drawable/ic_action_discard"
+        android:showAsAction="withText|ifRoom" />
+    <item android:id="@+id/action_refresh"
+        android:title="@string/action_refresh"
+        android:icon="@drawable/ic_action_refresh"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+</menu>

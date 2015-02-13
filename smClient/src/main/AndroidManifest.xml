@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.aku.sm.smclient" >
+
+
+
+    <permission android:name="org.akue.sm.symptomcheckin.READ" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- permission so the Android application can send the registration ID to the 3rd party server.  -->
+    <!-- To access Google+ APIs: -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- permission so the Android application can register and receive messages. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+
+    <!-- permission as GCM requires a Google account (necessary only if if the device is running a version lower than Android 4.0.4) -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <!-- permission so the application can keep the processor from sleeping when a message is received.
+         Optional—use only if the app wants to keep the device from sleeping. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- An applicationPackage + permission to prevent other Android applications from registering and receiving the Android application's messages.
+         The permission name must exactly match this pattern—otherwise the Android application will not receive the messages -->
+    <permission android:name="org.aku.sm.permission.C2D_MESSAGE"
+                android:protectionLevel="signature" />
+    <uses-permission android:name="org.aku.sm.permission.C2D_MESSAGE" />
+
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/launcher_name"
+        android:theme="@style/AppTheme"
+        android:supportsRtl="true">
+
+        <!-- A required meta-data tag in your app's AndroidManifest.xml does not exist.    -->
+        <meta-data android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="org.aku.sm.smclient.checkin.contentprovider.CheckinContentProvider"
+            android:authorities="org.akue.sm.Provider.checkin"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            android:readPermission="org.akue.sm.symptomcheckin.READ">
+        </provider>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="org.akue.sm.Provider.checkin.image"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            android:readPermission="org.akue.sm.symptomcheckin.READ">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+
+        <receiver android:name=".alarm.AlarmBroadcastReceiver">
+        </receiver>
+
+        <receiver
+            android:name=".gcm.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- filter on package name as specificed in the API console -->
+                <!-- under allowed andriod applications-->
+                <category android:name="org.aku.sm" />
+            </intent-filter>
+        </receiver>
+        <service android:name=".gcm.GcmIntentService" />
+
+    </application>
+
+
+
+</manifest>

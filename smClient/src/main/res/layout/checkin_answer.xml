@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="?android:attr/listPreferredItemHeightLarge"
+    android:padding="6dip">
+
+    <TextView
+        android:id="@+id/question_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/checkin_answer_question_text"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/checkin_answer_text"
+        android:id="@+id/answer_1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/checkin_answer_date"
+        android:id="@+id/intake_date"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/answer_1"
+        android:layout_alignEnd="@+id/question_text"
+        android:layout_marginEnd="40dp" />
+
+</RelativeLayout>

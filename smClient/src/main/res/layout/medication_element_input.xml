@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="0">
+
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/medication_element_input_name"
+            android:id="@+id/textview_name"
+            android:layout_column="0"/>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/medication_name"
+            android:labelFor="@id/medication_name"
+            android:layout_column="0"
+            android:inputType="text"/>
+    </TableRow>
+
+
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/medication_input_description"
+            android:id="@+id/textview_description"
+            android:layout_column="0" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/medication_description"
+            android:labelFor="@id/medication_description"
+            android:layout_column="0"
+            android:inputType="text"/>
+    </TableRow>
+</TableLayout>

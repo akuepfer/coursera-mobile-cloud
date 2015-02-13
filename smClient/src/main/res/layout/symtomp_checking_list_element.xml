@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:padding="6dip" >
+
+    <ImageView
+        android:id="@+id/clCheckinImage"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="6dip"
+        android:contentDescription="@string/symptom_checkin_list_icon_content_description"
+        android:src="@drawable/pain_some" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/symptom_checkin_list_pain_stomps_from_eating"
+        android:id="@+id/clPainStopFromEating"
+        android:layout_toEndOf="@+id/clCheckinImage"
+        android:layout_below="@+id/clCheckinDate"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/symptom_checkin_list_medication_intake"
+        android:id="@+id/clMedicationIntake"
+        android:layout_toEndOf="@+id/clPainStopFromEating"
+        android:layout_alignTop="@+id/clPainStopFromEating"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/symptom_checkin_list_pain"
+        android:id="@+id/clCheckinPain"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/clCheckinImage" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/symptom_checkin_list_checkin_date"
+        android:id="@+id/clCheckinDate"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

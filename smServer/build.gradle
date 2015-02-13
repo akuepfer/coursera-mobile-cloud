@@ -1,0 +1,64 @@
+buildscript {
+    ext {
+        springBootVersion = '1.1.8.RELEASE'
+    }
+    repositories {
+        maven { url "http://repo.spring.io/libs-milestone-local" }
+        maven { url "http://repo.spring.io/libs-snapshot" }
+        mavenLocal()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+apply plugin: 'war'
+
+war {
+    baseName = 'smserver'
+    version = '0.0.1-SNAPSHOT'
+}
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    providedRuntime
+}
+
+
+dependencies {
+
+    compile("org.springframework.boot:spring-boot-starter-security")
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.boot:spring-boot-starter-data-jpa")
+    compile("org.springframework.data:spring-data-rest-webmvc")
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+
+    compile group: 'org.apache.httpcomponents' , name: 'httpclient' , version: '4.3.5'
+
+
+    compile("org.springframework.boot:spring-boot-starter-tomcat")
+
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+
+    compile("org.hsqldb:hsqldb")
+
+
+    testCompile("junit:junit")
+}
+
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.12'
+}

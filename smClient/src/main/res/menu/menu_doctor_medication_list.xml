@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity" >
+    <item android:id="@+id/medication_create"
+        android:title="@string/action_create"
+        android:icon="@drawable/ic_action_new"
+        android:showAsAction="withText|ifRoom" />
+    <item android:id="@+id/medication_update"
+        android:title="@string/action_update"
+        android:icon="@drawable/ic_action_edit"
+        android:showAsAction="withText|ifRoom" />
+    <item android:id="@+id/medication_delete"
+        android:title="@string/action_delete"
+        android:icon="@drawable/ic_action_discard"
+        android:showAsAction="withText|ifRoom" />
+</menu>

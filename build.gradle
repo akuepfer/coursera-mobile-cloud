@@ -1,0 +1,40 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+//
+// Build (-x test to skip tests)
+// gradle build
+// gradle build -x test
+//
+// Build one module
+// gradle smServer:build
+// gradle smServer:build -x test
+
+// To run server
+// java -jar -Djava.security.egd=file:/dev/./urandom smserver-0.0.1-SNAPSHOT.war
+// Access http://188.166.25.144:8080/
+//
+// Why is -Djava.security.egd=file:/dev/./urandom is required for digitalocean.
+// - https://www.digitalocean.com/community/questions/ubuntu14-tomcat7-application-deployment-time
+// - http://security.stackexchange.com/questions/14386/what-do-i-need-to-configure-to-make-sure-my-software-uses-dev-urandom
+//
+// Run the server using spring-boot plugin
+// export JAVA_OPTS="-Xmx1024m -XX:MaxPermSize=128M -Djava.security.egd=file:/dev/./urandom"
+// gradle bootRun
+//
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.14.2'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
